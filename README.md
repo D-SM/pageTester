@@ -1,2 +1,3 @@
-# pageTester
-A script to test pages
+# Page tester
+
+A dashboard to test pages.
