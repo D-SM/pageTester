@@ -1,0 +1,50 @@
+a { cursor: pointer;}
+.ok  {
+    background-color: green;
+    color: white;
+    display: inline;
+    padding: 4px;
+
+}
+
+.err {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.ok + span {
+    font-size: 17px;
+}
+
+h2 {
+    display: inline;
+    font-size:22px;
+    cursor: pointer;
+}
+
+.status div {
+    margin: 10px;
+}
+
+.status div span:first-of-type {
+    display: inline-block;
+    width: 307px;
+}
+
+.content {
+    width: 100px !important;
+}
+.row { margin: 0;}
+.row section:nth-of-type(1) {background-color:#A7A7A7;}
+.row section:nth-of-type(2) {background-color:#E4DEA6;}
+
+.form-inline { display:inline; width:273px;}
+.mongo_log { position:relative;}
+#mongo_text { width:100px; }
+#inputSuccess4{
+    width:200px;
+    margin-top: -10px;
+}
