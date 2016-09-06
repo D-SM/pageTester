@@ -1,0 +1,80 @@
+......
+Bootstrap do tabelki
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+....
+Tablica z której ma powstać json
+<?php
+$servicesArray = [
+    '1' => ['name' => 'epity.pl', 'url' => 'https://www.e-pity.pl/'],
+    '2' => ['name' => 'druki-formularze.pl', 'url' => 'https://www.druki-formularze.pl/'],
+    '3' => ['name' => 'gazetaprawna.pl', 'url' => 'http://formularze.edgp.gazetaprawna.pl/'],
+    '4' => ['name' => '500-plus.pl', 'url' => 'http://www.500-plus.pl/'],
+    '5' => ['name' => 'cit-8.pl', 'url' => 'http://www.cit-8.pl/'],
+    '6' => ['name' => 'e-deklaracje.info.pl', 'url' => 'http://www.e-deklaracje.info.pl/'],
+    '7' => ['name' => 'jpk.info.pl', 'url' => 'http://www.jpk.info.pl/'],
+    '8' => ['name' => 'nip-2.pl', 'url' => 'http://www.nip-2.pl/'],
+    '9' => ['name' => 'pcc-3.pl', 'url' => 'http://www.pcc-3.pl/'],
+    '10' => ['name' => 'upl-1.pl', 'url' => 'http://www.upl-1.pl/'],
+    '11' => ['name' => 'vat-7.pl', 'url' => 'http://www.vat-7.pl/'],
+    '12' => ['name' => 'zapiczki.pit5.pl', 'url' => 'http://www.zapiczki.pit5.pl/'],
+    ];
+
+//echo '<pre>';
+//print_r($servicesArray);
+//echo  '</pre>';
+
+
+?>
+
+// Generator tabeli
+    <table border="1">
+        <h1>Tester</h1>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Url</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach ($servicesArray as $service => $values){ ?>
+            <tr>
+                <td><?php echo($values[name])?></php></td>
+                <td><?php echo($values[url]) ?></td>
+                <td>status</td>
+            </tr>
+        <?php } ?>
+        </tbody>
+        </table>
