@@ -1,4 +1,7 @@
+<?php
 
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -7,8 +10,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" src="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:63342/pageTester/client/css/main.css">
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -16,40 +20,90 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<!--<div class="row">-->
-    <!--<section class="status col-xs-6 col-md-6">-->
-        <!--<h1>cms02-w3 |  10.68.1.70</h1>-->
-        <!--<div><span>Database connect:</span>-->
-
-            <!--<h2 data-status="database_connect">false</h2></div>-->
-        <!--<div><span>Database request:</span>-->
-
-            <!--<h2 data-status="database_request">false</h2></div>-->
-        <!--<div><span>MDS offer:</span>-->
-
-            <!--<h2 data-status="mds_offer">false</h2></div>-->
-        <!--<div><span>MDS product:</span>-->
-
-            <!--<h2 data-status="mds_product">false</h2></div>-->
-        <!--<div><span>Recommendation:</span>-->
-
-            <!--<h2 data-status="recommendation"></h2></div>-->
-        <!--<div><span>Content:</span><img class="content" src="http://content.itaka.pl/cms/img/u/hotel/fuerioc_0.jpg"></div>-->
-        <!--<div><span>Content2:</span><img class="content" src="http://content2.itaka.pl/cms/img/u/hotel/fuerioc_0.jpg"></div>-->
-
-        <!--<div><span>Mailer:</span>-->
-
-            <!--<a href="flag_mailer.json" target="_blank"><h2 data-status="mailer">false</h2></a></div>-->
-    <!--</section>-->
 <!--</div>-->
-<section class="statusTable">
+<header>
+    <section class="description centered">
+        <h2>Page tester</h2>
+        <p>This is a page tester.</p>
 
+    </section>
+</header>
+
+<script type="text/html" id="domainTable">
+
+    <% _.each( dataJson , function(value, key) { %>
+
+    <tr>
+        <th scope="row">key</th>
+        <td>key</td>
+        <td>key</td>
+        <td>key</td>
+    </tr>
+
+
+    <% }); %>
+
+
+</script>
+
+<section>
+    <div class= "timeStamp centered">
+        <p>Last update: 06-08-2016</p>
+    </div>
+    <div class="container centered">
+        <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+            <tbody class="servicesTable">
+            <tr>
+                <th scope="row">1</th>
+                <td>M2k</td>
+                <td>1o</td>
+                <td>OFFLINE</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>3</td>
+                <td>4</td>
+                <td>ONLINE</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>6</td>
+                <td>3 Bird</td>
+                <td>ONLINE</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container centered">
+        <div class="menu-bottom">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Download statistics</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 </section>
+<footer>
+    <div class="centered">
+        <p>Some infomration</p>
+        <p><a href="#">Help</a></p>
+    </div>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
-<
+
 
 </body>
 

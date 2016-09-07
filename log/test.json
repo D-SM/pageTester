@@ -1,77 +1,64 @@
 {
-  "1": [
+  "sites": [
     {
+      "id": "1",
       "name": "epity.pl",
       "url": "http://www.e-pity.pl/"
-    }
-  ],
-  "2": [
+    },
     {
+      "id": "2",
       "name": "druki-formularze.pl",
       "url": "http://www.druki-formularze.pl/"
-    }
-  ],
-  "3": [
+    },
     {
+      "id": "3",
       "name": "gazetaprawna.pl",
       "url": "http://formularze.edgp.gazetaprawna.pl/"
-    }
-  ],
-  "4": [
+    },
     {
+      "id": "4",
       "name": "500-plus.pl",
       "url": "http://www.500-plus.pl/"
-    }
-  ],
-  "5": [
+    },
     {
+      "id": "5",
       "name": "cit-8.pl",
       "url": "http://www.cit-8.pl/"
-    }
-  ],
-  "6": [
+    },
     {
+      "id": "6",
       "name": "e-deklaracje.info.pl",
       "url": "http://www.e-deklaracje.info.pl/"
-    }
-  ],
-  "7": [
+    },
     {
+      "id": "7",
       "name": "jpk.info.pl",
       "url": "http://www.jpk.info.pl/"
-    }
-  ],
-  "8": [
+    },
     {
+      "id": "8",
       "name": "nip-2.pl",
       "url": "http://www.nip-2.pl/"
-    }
-  ],
-  "9": [
+    },
     {
+      "id": "9",
       "name": "pcc-3.pl",
       "url": "http://www.pcc-3.pl/"
-    }
-  ],
-  "10": [
+    },
     {
+      "id": "10",
       "name": "upl-1.pl",
       "url": "http://www.upl-1.pl/"
-    }
-  ],
-  "11": [
+    },
     {
+      "id": "11",
       "name": "vat-7.pl",
       "url": "http://www.vat-7.pl/"
-    }
-  ],
-  "12": [
+    },
     {
+      "id": "12",
       "name": "zapiczki.pit5.pl",
       "url": "http://www.zapiczki.pit5.pl/"
     }
   ]
 }
-
-
-{"status":"OK","last_log_row":["OK","21-04-2016 12:54:22","mateusz\/testowanie rezerwacji"]}

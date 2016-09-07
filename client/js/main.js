@@ -1,11 +1,15 @@
-$.getJSON( "log/test.json", function( data ) {
-    var items = [];
-    $.each( data, function( key, val ) {
-        items.push( "<li id='" + key + "'>" + val + "</li>" );
-    });
+$(document).ready(
+    function(){
+        var myVeryFirstAwesomeTemplate = _.template(_unescape($('#domainTable')).html());
 
-    $( "<ul/>", {
-        "class": "my-new-list",
-        html: items.join( "" )
-    }).appendTo( "body" );
-});
+         $.getJSON('http://localhost:63342/pageTester/log/test.json', showUrlTable);
+        //var JSONObject = JSON.parse("../log/test.json");
+
+
+        function showUrlTable(data){
+        console.log(data);
+           $('#servicesTable').append(myVeryFirstAwesomeTemplate({dataJson:data}));
+
+        }
+    }
+);
