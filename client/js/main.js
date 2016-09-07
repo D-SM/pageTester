@@ -1,15 +1,12 @@
 $(document).ready(
     function(){
-        var myVeryFirstAwesomeTemplate = _.template(_unescape($('#domainTable')).html());
 
-         $.getJSON('http://localhost:63342/pageTester/log/test.json', showUrlTable);
-        //var JSONObject = JSON.parse("../log/test.json");
-
+        var templateFind = $('body').find('#domainTable');
+        var myTemplate = _.template(_.unescape(templateFind.html()) );
+        $.getJSON('http://localhost:63342/pageTester/log/test.json', showUrlTable);
 
         function showUrlTable(data){
-        console.log(data);
-           $('#servicesTable').append(myVeryFirstAwesomeTemplate({dataJson:data}));
-
+            $('.servicesTable').append(myTemplate({dataJson:data.sites}));
         }
     }
 );
