@@ -1,4 +1,7 @@
-<!doctype html>
+<?php
+    require_once '.http://localhost:63342/pageTester/client/log/checkstatus.php'
+?>
+
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
@@ -18,11 +21,10 @@
 <![endif]-->
 
 <!--</div>-->
-<header>
+<header class="shadow">
     <section class="description centered">
-        <p><img src=""</p>
-        <h2>Page tester</h2>
-        <p>This is a page tester.</p>
+        <h2><a href="#"><img src="../img/logo.png" height="50"></a>
+        Page tester</h2></p>
         <div class="menu-top">
             <nav>
                 <ul>
@@ -43,9 +45,9 @@
 <script type="text/html" id="domainTable">
     <% _.each( dataJson , function(value, key) { %>
     <tr>
-        <th scope="row"><%= key.name %></th>
+        <th scope="row"><%= value.id %></th>
+        <td><%= value.name %></td>
         <td><%= value.url %></td>
-        <td><%= key.name %></td>
         <td>ONLINE</td>
     </tr>
     <% }); %>
@@ -53,9 +55,9 @@
 
 <section>
     <div class= "timeStamp centered">
-        <p>Last update: 06-08-2016</p>
+        <p>Last update: 07-08-2016</p>
     </div>
-    <div class="container centered">
+    <div class="container centered shadow">
         <div class="menu-container">
             <nav>
                 <ul>
@@ -71,36 +73,36 @@
                 </ul>
             </nav>
         </div>
-        <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>URL</th>
-            <th>Status</th>
-        </tr>
-        </thead>
-            <tbody class="servicesTable">
-
-            </tbody>
-        </table>
+            <div class="servicesTableContainer">
+                <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>URL</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                    <tbody class="servicesTable">
+                    </tbody>
+                </table>
+            </div>
+            <div class="menu-bottom">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Download statistics</a>
+                        </li>
+                        <li>
+                            <a href="#">Download database</a>
+                        </li>
+                        <li>
+                            <a href="#">Download history statistics</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
     </div>
-    <div class="container centered">
-        <div class="menu-bottom">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Download statistics</a>
-                    </li>
-                    <li>
-                        <a href="#">Download database</a>
-                    </li>
-                    <li>
-                        <a href="#">Download history statistics</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
 </section>
 <footer>
     <div class="centered">
