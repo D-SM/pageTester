@@ -60,6 +60,7 @@ a:hover {
 }
 .menu-top a:hover {
     background: #e5e5e5;
+    background-opacity:0.1;
     text-decoration:none;
     color:black;
 }
