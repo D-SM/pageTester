@@ -1,3 +1,10 @@
+    echo '<pre>';
+    print_r($key["url"]);
+    echo  '</pre>';
+
+//ZAPIS HISTORII STATUSÓW z ładną datą
+//$date = new DateTime();
+//echo $date->format('Y-m-d H:i:s');
 ......
 Bootstrap do tabelki
 

@@ -1,7 +1,6 @@
 <?php
-    require_once '.http://localhost:63342/pageTester/client/log/checkstatus.php'
+//    require_once '.http://localhost:63342/pageTester/client/log/checkstatus.php'
 ?>
-
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
@@ -52,10 +51,9 @@
     </tr>
     <% }); %>
 </script>
-
 <section>
     <div class= "timeStamp centered">
-        <p>Last update: 07-08-2016</p>
+        <p>Last update: *time stamp*</p>
     </div>
     <div class="container centered shadow">
         <div class="menu-container">
@@ -69,6 +67,9 @@
                     </li>
                     <li>
                         <a href="#">Configure tester</a>
+                    </li>
+                    <li>
+                        <a href="#">Reload</a>
                     </li>
                 </ul>
             </nav>
