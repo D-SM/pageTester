@@ -24,7 +24,7 @@
     <section class="description centered">
         <h2><a href="#"><img src="../img/logo.png" height="50"></a>
         Page tester</h2></p>
-        <div class="menu-top">
+        <div class="menuTop">
             <nav>
                 <ul>
                     <li>
@@ -43,20 +43,21 @@
 </header>
 <script type="text/html" id="domainTable">
     <% _.each( dataJson , function(value, key) { %>
-    <tr>
+    <tr data-id="<%= value.id %>">
         <th scope="row"><%= value.id %></th>
         <td><%= value.name %></td>
         <td><%= value.url %></td>
-        <td>ONLINE</td>
+        <td class="status"></td>
+        <td class="attr1"></td>
     </tr>
     <% }); %>
 </script>
 <section>
     <div class= "timeStamp centered">
-        <p>Last update: *time stamp*</p>
+        <p>Data updated: *time stamp*</p>
     </div>
     <div class="container centered shadow">
-        <div class="menu-container">
+        <div class="menuContainer">
             <nav>
                 <ul>
                     <li>
@@ -64,9 +65,6 @@
                     </li>
                     <li>
                         <a href="#">Show</a>
-                    </li>
-                    <li>
-                        <a href="#">Configure tester</a>
                     </li>
                     <li>
                         <a href="#">Reload</a>
@@ -82,13 +80,14 @@
                     <th>Name</th>
                     <th>URL</th>
                     <th>Status</th>
+                    <th>Attr1</th>
                 </tr>
                 </thead>
                     <tbody class="servicesTable">
                     </tbody>
                 </table>
             </div>
-            <div class="menu-bottom">
+            <div class="menuBottom">
                 <nav>
                     <ul>
                         <li>

@@ -43,36 +43,36 @@ a:hover {
     padding: 5px 50px 1px 0;
     color:#777777;
 }
-.menu-top {
+.menuTop {
     margin-left: 10px;
     margin-bottom: -19px;
 }
-.menu-top li {
+.menuTop li {
     display:inline-block;
     vertical-align: top;
 }
-.menu-top a {
+.menuTop a {
     display: block;
     padding: 14px 13px;
     border: 1px;
     border-color: #004d40;
     color:#ffffff;
 }
-.menu-top a:hover {
+.menuTop a:hover {
     background: #e5e5e5;
     background-opacity:0.1;
     text-decoration:none;
     color:black;
 }
-.menu-container {
+.menuContainer {
     margin-left: 10px;
     margin-bottom: -17px;
 }
-.menu-container li {
+.menuContainer li {
     display:inline-block;
     vertical-align: top;
 }
-.menu-container a {
+.menuContainer a {
     display: block;
     padding: 16px 15px;
     border: 1px;
@@ -83,16 +83,34 @@ a:hover {
     width: 800px;
     padding: 10px 0 10px 0;
 }
-.menu-bottom {
+.menuBottom {
     margin-left: 10px;
 }
-.menu-bottom li {
+.menuBottom li {
     display:inline-block;
     vertical-align: top;
 }
-.menu-bottom a {
+.menuBottom a {
     display:block;
     padding: 16px 15px;
     border:1px;
     border-color: #004d40;
+}
+.image1 {
+    background-image: url("../../img/status_online.png");
+    background-position: center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+
+}
+.table>tbody>tr>td>.image1 {
+    padding: 0 10px 0 0;
+
+}
+.image0{
+    background: url("../../img/status_offline.png");
+    background-position: center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+
 }

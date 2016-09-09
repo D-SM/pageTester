@@ -1,3 +1,25 @@
+
+    function(){
+
+        $.getJSON('../log/status.json', showUrlStatus);
+        function showUrlStatus(statusDara){
+            $.forEach(data, function() ){
+
+            }
+        }
+
+
+            <% _.each( dataJson , function(value, key) { %>
+                <tr data-id="<%= value.id %>">;
+        }
+            $('[data-id="s"]')
+
+        $('.servicesTable [data-id="$id"]').append(myTemplate({dataJson:data.sites}));
+
+    }
+);
+
+
     echo '<pre>';
     print_r($key["url"]);
     echo  '</pre>';
