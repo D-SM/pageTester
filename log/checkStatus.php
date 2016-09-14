@@ -1,20 +1,22 @@
 <?php
 // class to check and save the status of the page
-class checkStatus {
 
+require_once 'getConfig.php';
+require_once 'jsonWriter.php';
+
+//error_reporting(0);
+//@ini_set('display_errors', 0);
+
+class checkStatus {
     private $parsedConfigJson;
     private $status = [];
-    private $writeFile;
-    private $error;
 
     public function __construct(){
         $configJson = new getConfig();
-        $this->parsedConfigJson = $configJson->parseConfigJson();
+        $this->parsedConfigJson = $configJson->getConfigJson();
         $this->getStatus();
-        $this->jsonWrite();
     }
 
-    //Checking the url status
     public function getStatus()
     {
         foreach ($this->parsedConfigJson['sites'] as $key) {
@@ -33,34 +35,15 @@ class checkStatus {
                 ];
             }
         }
+        $this->jsonWrite();
     }
 
-    //Writing the status.json
     public function jsonWrite()
     {
-        $this->js = new getConfig();
-
-        if (file_exists('status.json')) {
-            $statusJson = json_decode(file_get_contents('status.json'), true);
-        }else {
-            $statusJson = [];
-        }
-        $statusJson[time()] = $this->status;
-        file_put_contents('status.json', json_encode($statusJson));
+        $saveFile = new jsonWriter();
+        $saveFile->setFile('status.json');
+        $saveFile->setFileData($this->status);
+        $saveFile->writeFile();
     }
-
 }
-
 $checkStatus = new checkStatus();
-$checkStatus->getMetatags();
-
-echo '<pre>';
-print_r($metaTags);
-echo  '</pre>';
-
-//echo date('m/d/Y H:i:s', $date);
-//file_put_contents();
-//    echo '<pre>';
-//    print_r($value['url']);
-//    echo  '</pre>';
-

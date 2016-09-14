@@ -3,62 +3,74 @@
     {
       "id": "1",
       "name": "epity.pl",
-      "url": "http://www.e-pity.pl/"
+      "url": "http://www.e-pity.pl/",
+      "robots": "all"
     },
     {
       "id": "2",
       "name": "druki-formularze.pl",
-      "url": "http://www.druki-formularze.pl/"
+      "url": "http://www.druki-formularze.pl/",
+      "robots": "all"
     },
     {
       "id": "3",
       "name": "gazetaprawna.pl",
-      "url": "http://formularze.edgp.gazetaprawna.pl/"
+      "url": "http://formularze.edgp.gazetaprawna.pl/",
+      "robots": "noindex, nofollow"
     },
     {
       "id": "4",
       "name": "500-plus.pl",
-      "url": "http://www.500-plus.pl/"
+      "url": "http://www.500-plus.pl/",
+      "robots": "all"
     },
     {
       "id": "5",
       "name": "cit-8.pl",
-      "url": "http://www.cit-8.pl/"
+      "url": "http://www.cit-8.pl/",
+      "robots": "all"
     },
     {
       "id": "6",
       "name": "e-deklaracje.info.pl",
-      "url": "http://www.e-deklaracje.info.pl/"
+      "url": "http://www.e-deklaracje.info.pl/",
+      "robots": "all"
     },
     {
       "id": "7",
       "name": "jpk.info.pl",
-      "url": "http://www.jpk.info.pl/"
+      "url": "http://www.jpk.info.pl/",
+      "robots": "all"
     },
     {
       "id": "8",
       "name": "nip-2.pl",
-      "url": "http://www.nip-2.pl/"
+      "url": "http://www.nip-2.pl/",
+      "robots": "all"
     },
     {
       "id": "9",
       "name": "pcc-3.pl",
-      "url": "http://www.pcc-3.pl/"
+      "url": "http://www.pcc-3.pl/",
+      "robots": "all"
     },
     {
       "id": "10",
       "name": "upl-1.pl",
-      "url": "http://www.upl-1.pl/"
+      "url": "http://www.upl-1.pl/",
+      "robots": "all"
     },
     {
       "id": "11",
       "name": "vat-7.pl",
-      "url": "http://www.vat-7.pl/"
+      "url": "http://www.vat-7.pl/",
+      "robots": "all"
     },
     {
       "id": "12",
       "name": "zapiczki.pit5.pl",
-      "url": "http://www.zapiczki.pit5.pl/"
+      "url": "http://www.zapiczki.pit5.pl/",
+      "robots": "all"
     }
   ],
   "logFiles": [
@@ -69,8 +81,8 @@
       "onOff" : 1
     },
     {
-      "name": "attr1",
-      "fileName" : "attr1.log",
+      "name": "robots",
+      "fileName" : "robots.log",
       "freqTime": 86400,
       "onOff" : 0
     },

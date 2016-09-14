@@ -1,5 +1,8 @@
 <?php
 //    require_once '.http://localhost:63342/pageTester/client/log/checkstatus.php'
+
+//error_reporting(0);
+//@ini_set('display_errors', 0);
 ?>
 <html class="no-js" lang="">
 <head>
@@ -8,10 +11,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" src="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost:63342/pageTester/client/css/main.css">
-    <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -48,13 +50,13 @@
         <td><%= value.name %></td>
         <td><%= value.url %></td>
         <td class="status"></td>
-        <td class="attr1"></td>
+        <td class="robots"></td>
     </tr>
     <% }); %>
 </script>
 <section>
     <div class= "timeStamp centered">
-        <p>Data updated: *time stamp*</p>
+        <p>Data updated: <span data-id="lastUpdateTime">*</span></p>
     </div>
     <div class="container centered shadow">
         <div class="menuContainer">
@@ -64,10 +66,10 @@
                         <a href="#">Page</a>
                     </li>
                     <li>
-                        <a href="#">Show</a>
+                        <a href="#">Reload</a>
                     </li>
                     <li>
-                        <a href="#">Reload</a>
+                        <a href="#">Expand all</a>
                     </li>
                 </ul>
             </nav>
@@ -80,7 +82,7 @@
                     <th>Name</th>
                     <th>URL</th>
                     <th>Status</th>
-                    <th>Attr1</th>
+                    <th>Meta tags</th>
                 </tr>
                 </thead>
                     <tbody class="servicesTable">
@@ -115,13 +117,9 @@
         </div>
     </div>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
 
-
 </body>
-
-
 </html>

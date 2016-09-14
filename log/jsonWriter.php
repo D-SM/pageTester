@@ -13,8 +13,9 @@ class jsonWriter {
     public function setFileData($fileData)
     {
         $this->fileData=$fileData;
+        $this->getDataFromFile();
     }
-    public function setNewFileData()
+    public function getDataFromFile()
     {
         if (file_exists($this->fileName)) {
             $this->newFileData = json_decode(file_get_contents($this->fileName), true);
@@ -26,7 +27,7 @@ class jsonWriter {
 
     public function writeFile()
     {
-        file_put_contents($this->fileName, json_encode($this->newFileData));s
+        file_put_contents($this->fileName, json_encode($this->newFileData));
     }
 
 }

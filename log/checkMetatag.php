@@ -1,49 +1,58 @@
 <?php
 //class to check the metatags
-class checkMetatag {
-    private $configJson;
+
+require_once 'getConfig.php';
+require_once 'jsonWriter.php';
+
+class checkMetaTag {
     private $parsedConfigJson;
-    private $metaTags = [];
+    private $allMetaTags = [];
+    private $currentMetaTagContainer = [];
 
-    public function __construct(){
+    public function __construct($metaTag){
         $this->configJson = new getConfig();
-        $this->parsedConfigJson = $this->configJson->parseConfigJson();
-
-        $this->getMetatags();
-        $this->jsonWrite();
+        $this->parsedConfigJson = $this->configJson->getConfigJson();
+        $this->getAllMetaTags();
+        $this->checkMetaTag($metaTag);
     }
 
-
-    public function getMetatags()
+    public function getAllMetaTags()
     {
         foreach ($this->parsedConfigJson['sites'] as $key) {
-            $allTags= get_meta_tags($key['url']);
-            if ($allTags['robots'])) {
-                $this->metaTags[] = [
-                    'id' => $key['id'],
-                    'time' => time(),
-                    'keywords' => 1
-                ];
-            }else {
-                $this->metaTags[] = [
-                    'id' => $key['id'],
-                    'time' => time(),
-                    'keywords' => 0
-                ];
+            $allTags[$key['id']] = get_meta_tags($key['url']);
+            $this->allMetaTags = $allTags;
+        }
+    }
+
+    Public function checkMetaTag($metaTag)
+    {
+        foreach ($this->allMetaTags as $key => $value) {
+                if (!empty ($value[$metaTag]) AND $value[$metaTag] === $this->parsedConfigJson['sites'][$key-1][$metaTag]) {
+                    $this->currentMetaTagContainer[] = [
+                        'id' => $key,
+                        'time' => time(),
+                        $metaTag.'Match' => 1,
+                        $metaTag.'Values' => $value[$metaTag]
+                    ];
+                } else {
+                    $this->currentMetaTagContainer[] = [
+                        'id' => $key,
+                        'time' => time(),
+                        $metaTag.'Match' => 0,
+                        $metaTag.'Values' => $value[$metaTag]
+                    ];
             }
         }
+        $this->saveToFile($metaTag, $this->currentMetaTagContainer);
     }
 
-    public function jsonWrite()
+    public function saveToFile($fileName, $fileContent)
     {
-        if (file_exists('metaTags.json')) {
-            $metaTagJson = json_decode(file_get_contents('metaTags.json'), true);
-        }else {
-            $metaTagJson = [];
-        }
-        $metaTagJson[time()] = $this->metaTags;
-        file_put_contents('metaTags.json', json_encode($metaTagJson));
+        $saveFile = new jsonWriter();
+        $saveFile->setFile($fileName.'.json');
+        $saveFile->setFileData($fileContent);
+        $saveFile->writeFile();
     }
 }
-$metatag = new checkMetatag();
-
+$metatag = new checkMetaTag('robots');
+var_dump(time("Y-m-d | h:i:sa"));
