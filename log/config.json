@@ -60,5 +60,25 @@
       "name": "zapiczki.pit5.pl",
       "url": "http://www.zapiczki.pit5.pl/"
     }
+  ],
+  "logFiles": [
+    {
+      "name": "status",
+      "fileName" : "status.log",
+      "freqTime": 60,
+      "onOff" : 1
+    },
+    {
+      "name": "attr1",
+      "fileName" : "attr1.log",
+      "freqTime": 86400,
+      "onOff" : 0
+    },
+    {
+      "name": "attr2",
+      "fileName" : "attr2.log",
+      "freqTime": 86400,
+      "onOff" : 0
+    }
   ]
 }
