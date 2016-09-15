@@ -1,7 +1,8 @@
 <?php
 
 // class to load and parse the config json
-require_once '/home/webtailor/PhpstormProjects/pageTester/public/helper.php';
+//require_once '/home/webtailor/PhpstormProjects/pageTester/public/helper.php';
+require_once 'helper.php';
 
 class getConfig
 {

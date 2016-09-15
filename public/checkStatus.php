@@ -1,10 +1,10 @@
 <?php
 // class to check and save the status of the page
 
-//require_once 'getConfig.php';
-//require_once 'jsonWriter.php';
-require_once '/home/webtailor/PhpstormProjects/pageTester/public/jsonWriter.php';
-require_once '/home/webtailor/PhpstormProjects/pageTester/public/getConfig.php';
+require_once 'getConfig.php';
+require_once 'jsonWriter.php';
+//require_once '/home/webtailor/PhpstormProjects/pageTester/public/jsonWriter.php';
+//require_once '/home/webtailor/PhpstormProjects/pageTester/public/getConfig.php';
 //error_reporting(0);
 //@ini_set('display_errors', 0);
 
@@ -50,3 +50,4 @@ class checkStatus
     }
 }
 
+new checkStatus();

@@ -1,8 +1,7 @@
 <?php
 
 // class to write the json
-
-require_once '/home/webtailor/PhpstormProjects/pageTester/public/helper.php';
+require_once 'helper.php';
 
 class jsonWriter
 {
