@@ -49,4 +49,3 @@ class checkStatus
     }
 }
 
-$checkStatus = new checkStatus();

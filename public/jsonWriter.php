@@ -29,7 +29,7 @@ class jsonWriter
 
     public function createPath()
     {
-       $this->path = helper::detectConfigPath();
+       $this->path = helper::detectPath();
     }
 
     public function getDataFromFile()
