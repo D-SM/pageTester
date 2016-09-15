@@ -76,21 +76,21 @@
   "logFiles": [
     {
       "name": "status",
-      "fileName" : "status.log",
+      "fileName": "status.log",
       "freqTime": 60,
-      "onOff" : 1
+      "onOff": 1
     },
     {
       "name": "robots",
-      "fileName" : "robots.log",
+      "fileName": "robots.log",
       "freqTime": 86400,
-      "onOff" : 0
+      "onOff": 0
     },
     {
       "name": "attr2",
-      "fileName" : "attr2.log",
+      "fileName": "attr2.log",
       "freqTime": 86400,
-      "onOff" : 0
+      "onOff": 0
     }
   ]
 }

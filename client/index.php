@@ -25,7 +25,7 @@
 <header class="shadow">
     <section class="description centered">
         <h2><a href="#"><img src="../img/logo.png" height="50"></a>
-        Page tester</h2></p>
+            Page tester</h2></p>
         <div class="menuTop">
             <nav>
                 <ul>
@@ -55,7 +55,7 @@
     <% }); %>
 </script>
 <section>
-    <div class= "timeStamp centered">
+    <div class="timeStamp centered">
         <p>Data updated: <span data-id="lastUpdateTime">*</span></p>
     </div>
     <div class="container centered shadow">
@@ -74,8 +74,8 @@
                 </ul>
             </nav>
         </div>
-            <div class="servicesTableContainer">
-                <table class="table table-striped">
+        <div class="servicesTableContainer">
+            <table class="table table-striped">
                 <thead>
                 <tr>
                     <th>#</th>
@@ -85,35 +85,36 @@
                     <th>Meta tags</th>
                 </tr>
                 </thead>
-                    <tbody class="servicesTable">
-                    </tbody>
-                </table>
-            </div>
-            <div class="menuBottom">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Download statistics</a>
-                        </li>
-                        <li>
-                            <a href="#">Download database</a>
-                        </li>
-                        <li>
-                            <a href="#">Download history statistics</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                <tbody class="servicesTable">
+                </tbody>
+            </table>
+        </div>
+        <div class="menuBottom">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Download statistics</a>
+                    </li>
+                    <li>
+                        <a href="#">Download database</a>
+                    </li>
+                    <li>
+                        <a href="#">Download history statistics</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </section>
 <footer>
     <div class="centered">
         <div class="footer-left">
-        <p>Some information</p>
+            <p>Some information</p>
         </div>
         <div class="footer-right">
-        <p><a href="#">Help</a></p>
-        <p><a href="mailto:dawid.smolski@gmail.com">Report a problem</a></p>
+            <p><a href="#">Help</a></p>
+
+            <p><a href="mailto:dawid.smolski@gmail.com">Report a problem</a></p>
         </div>
     </div>
 </footer>
