@@ -1,7 +1,7 @@
 <?php
 
-require_once 'checkMetaTag.php';
-
+//require_once 'checkMetaTag.php';
+require_once '/home/webtailor/PhpstormProjects/pageTester/public/checkMetaTag.php';
 class getRobots {
     private $metaTag = 'robots';
 
