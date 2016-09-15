@@ -1,8 +1,10 @@
-355<?php
+<?php
 //class to check the metatags
 
-require_once 'getConfig.php';
-require_once 'jsonWriter.php';
+//require_once 'getConfig.php';
+//require_once 'jsonWriter.php';
+require_once '/home/webtailor/PhpstormProjects/pageTester/public/jsonWriter.php';
+require_once '/home/webtailor/PhpstormProjects/pageTester/public/getConfig.php';
 
 class checkMetaTag
 {

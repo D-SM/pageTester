@@ -2,6 +2,8 @@
 
 // class to write the json
 
+require_once '/home/webtailor/PhpstormProjects/pageTester/public/helper.php';
+
 class jsonWriter
 {
     private $path;

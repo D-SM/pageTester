@@ -10,4 +10,3 @@ class getKeywords {
         $this->configJson = new checkMetaTag($this->metaTag);
     }
 }
-$metaTagGet = new getKeywords();

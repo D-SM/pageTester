@@ -1,6 +1,7 @@
 <?php
 
 // class to load and parse the config json
+require_once '/home/webtailor/PhpstormProjects/pageTester/public/helper.php';
 
 class getConfig
 {
@@ -11,12 +12,13 @@ class getConfig
     function __construct()
     {
         $this->createPath();
+        $this->getConfigJson();
     }
 
     public function getConfigJson()
     {
-        if (file_exists($this->path .'config.json')) {
-            $this->configJson = file_get_contents('../config.json');
+        if (file_exists($this->path . 'config.json')) {
+            $this->configJson = file_get_contents($this->path . 'config.json');
             $this->parseConfigJson();
             return $this->parsedConfigJson;
         } else {
@@ -27,7 +29,7 @@ class getConfig
 
     public function createPath()
     {
-       $this->path = helper::detectPath();
+       $this->path = helper::detectConfigPath();
     }
 
     public function parseConfigJson()
