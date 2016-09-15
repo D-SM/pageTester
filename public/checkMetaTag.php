@@ -21,8 +21,7 @@ class checkMetaTag
     public function getAllMetaTags()
     {
         foreach ($this->parsedConfigJson['sites'] as $key) {
-            $allTags[$key['id']] = get_meta_tags($key['url']);
-            $this->allMetaTags = $allTags;
+            $this->allMetaTags[$key['id']] = get_meta_tags($key['url']);
         }
     }
 
@@ -33,6 +32,7 @@ class checkMetaTag
                 $this->currentMetaTagContainer[] = [
                     'id' => $key,
                     'time' => time(),
+                    $metaTag . 'Exists' => 1,
                     $metaTag . 'Match' => 1,
                     $metaTag . 'Values' => $value[$metaTag]
                 ];
@@ -40,6 +40,7 @@ class checkMetaTag
                 $this->currentMetaTagContainer[] = [
                     'id' => $key,
                     'time' => time(),
+                    $metaTag . 'Exists' => 0,
                     $metaTag . 'Match' => 0,
                     $metaTag . 'Values' => $value[$metaTag]
                 ];
@@ -56,6 +57,4 @@ class checkMetaTag
         $saveFile->writeFile();
     }
 }
-
-$metatag = new checkMetaTag('robots');
-var_dump(time("Y-m-d | h:i:sa"));
+//var_dump(time("Y-m-d | h:i:sa"));

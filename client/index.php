@@ -51,6 +51,7 @@
         <td><%= value.url %></td>
         <td class="status"></td>
         <td class="robots"></td>
+        <td class="keywords"></td>
     </tr>
     <% }); %>
 </script>
@@ -83,6 +84,7 @@
                     <th>URL</th>
                     <th>Status</th>
                     <th>Meta tags</th>
+                    <th>Keywords</th>
                 </tr>
                 </thead>
                 <tbody class="servicesTable">

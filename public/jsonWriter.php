@@ -14,7 +14,6 @@ class jsonWriter
         $this->createPath();
     }
 
-
     public function setFile($fileName)
     {
         $this->fileName = $fileName;
@@ -28,18 +27,13 @@ class jsonWriter
 
     public function createPath()
     {
-        if (php_sapi_name() === 'cli') {
-            $this->path = '/home/webtailor/PhpstormProjects/pageTester/log/';
-        } else {
-            $this->path = '../data/';
-        }
+       $this->path = helper::detectConfigPath();
     }
 
     public function getDataFromFile()
     {
-//        if (file_exists($this->$path.$this->fileName)) {
-        if (file_exists('../data/'.$this->fileName)) {
-            $this->newFileData = json_decode(file_get_contents('../data/'.$this->fileName), true);
+        if (file_exists($this->path.$this->fileName)) {
+            $this->newFileData = json_decode(file_get_contents($this->path.$this->fileName), true);
         } else {
             $this->newFileData = [];
         }
@@ -48,7 +42,7 @@ class jsonWriter
 
     public function writeFile()
     {
-        file_put_contents('../data/'.$this->fileName, json_encode($this->newFileData, JSON_PRETTY_PRINT));
+        file_put_contents($this->path.$this->fileName, json_encode($this->newFileData, JSON_PRETTY_PRINT));
     }
 
 }

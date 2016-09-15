@@ -14,24 +14,31 @@ $(document).ready(
         // Retrieving data from status json and adding information to the table per each url
         $.getJSON('../log/data/status.json', showUrlStatus);
         function showUrlStatus(data) {
-            for (var i = 0; i < _.values(data).length; i++) {
-                $.each(_.values(data)[i], function (id, status) {
-                    $('.servicesTable [data-id="' + status.id + '"] .status').addClass('image' + status.status);
-                    $('[data-id="lastUpdateTime"]').text(status.time);
-
-                });
-            }
+            var i = 0;
+            $.each(_.values(data)[i], function (id, status) {
+                $('.servicesTable [data-id="' + status.id + '"] .status').addClass('image' + status.status);
+                $('[data-id="lastUpdateTime"]').text(status.time);
+                i++;
+            });
         }
 
         // Retrieving data from robots json and adding information to the table per each url
-        $.getJSON('../log/data/robots.json', showUrlMetaTag);
-        function showUrlMetaTag(data) {
-            for (var i = 0; i < _.values(data).length; i++) {
-                $.each(_.values(data)[i], function (id, status) {
-                    $('.servicesTable [data-id="' + status.id + '"] .robots').addClass('image' + status.robotsMatch);
+        $.getJSON('../log/data/robots.json', showUrlRobots);
+        function showUrlRobots(data) {
+            var i = 0;
+            $.each(_.values(data)[i], function (id, status) {
+                $('.servicesTable [data-id="' + status.id + '"] .robots').addClass('image' + status.robotsMatch);
+                i++;
+            });
+        }
 
-                });
-            }
+        $.getJSON('../log/data/keywords.json', showUrlKeywords);
+        function showUrlKeywords(data) {
+            var i = 0;
+            $.each(_.values(data)[i], function (id, status) {
+                $('.servicesTable [data-id="' + status.id + '"] .keywords').addClass('image' + status.keywordsMatch);
+                i++;
+            });
         }
     }
 );
