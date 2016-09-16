@@ -1,9 +1,14 @@
 /* global $,_ */
 
 $(document).ready(
+
     function () {
         'use strict';
-        var historyJson;
+        var historyJson =[];
+        window.statusJ = {
+            count:0,
+            field:0
+        };
 
         //Retrieving data from config.json for table template .each
         $.getJSON('../public/config.json', showUrlTable);
@@ -13,52 +18,67 @@ $(document).ready(
         }
 
         // Retrieving data from status json and adding information to the table per each url
-        _.each([1,2,3,4,5,6,7,8,9], function (el) {
-            $.getJSON('../log/status_'+ el +'.json', mergeHistoryJson);
-        });
-        var historyJson = [];
-        function mergeHistoryJson(data) {
-            historyJson.push(data);
-            console.log(historyJson);
+        function readAllJson() {
+            var dfd = jQuery.Deferred();
+            _.each([1,2,3,4,5,6,7,8,9], function (el) {
+                $.getJSON('../log/status_'+ el +'.json',  function mergeHistoryJson(data) {
+                    historyJson.push(data);
+                    if (historyJson.length === 9) {
+                        dfd.resolve();
+                    }
+                });
+            });
+            return dfd.promise();
+
         }
 
-        //$.each(_.values(data)[i], function (id, status) {
 
+        $.when( readAllJson() ).then(
+            function averageStatus() {
+                _.each(_.values(historyJson), function (v, k) {
+                    _.each(_.values(v), function(val,key){
+                        //console.log(val);
+                        statusJ.field = statusJ.field + 1;
+
+                    });
+                    });
+
+            }
+        );
 
 
 
 
 
         // Retrieving data from status json and adding information to the table per each url\
-        var historyJson = [];
-        function showUrlStatus(data) {
-            var i = 0;
-            $.each(_.values(data)[i], function (id, status) {
-                $('.servicesTable [data-id="' + status.id + '"] .status').addClass('image' + status.status);
-                $('[data-id="lastUpdateTime"]').text(status.time);
-                i++;
-            });
-        }
-
-        // Retrieving data from robots json and adding information to the table per each url
-        $.getJSON('../log/robots.json', showUrlRobots);
-        function showUrlRobots(data) {
-            var i = 0;
-            $.each(_.values(data)[i], function (id, status) {
-                $('.servicesTable [data-id="' + status.id + '"] .robots').addClass('image' + status.robotsMatch);
-                i++;
-            });
-        }
-
-        // Retrieving data from kewords json and adding information to the table per each url
-        $.getJSON('../log/keywords.json', showUrlKeywords);
-        function showUrlKeywords(data) {
-            var i = 0;
-            $.each(_.values(data)[i], function (id, status) {
-                $('.servicesTable [data-id="' + status.id + '"] .keywords').addClass('image' + status.keywordsMatch);
-                i++;
-            });
-        }
+        //function showUrlStatus(data) {
+        //    var i = 0;
+        //    $.each(_.values(data)[i], function (id, status) {
+        //        $('.servicesTable [data-id="' + status.id + '"] .status').addClass('image' + status.status);
+        //        $('[data-id="lastUpdateTime"]').text(status.time);
+        //        i++;
+        //    });
+        //}
+        //
+        //// Retrieving data from robots json and adding information to the table per each url
+        //$.getJSON('../log/robots.json', showUrlRobots);
+        //function showUrlRobots(data) {
+        //    var i = 0;
+        //    $.each(_.values(data)[i], function (id, status) {
+        //        $('.servicesTable [data-id="' + status.id + '"] .robots').addClass('image' + status.robotsMatch);
+        //        i++;
+        //    });
+        //}
+        //
+        //// Retrieving data from kewords json and adding information to the table per each url
+        //$.getJSON('../log/keywords.json', showUrlKeywords);
+        //function showUrlKeywords(data) {
+        //    var i = 0;
+        //    $.each(_.values(data)[i], function (id, status) {
+        //        $('.servicesTable [data-id="' + status.id + '"] .keywords').addClass('image' + status.keywordsMatch);
+        //        i++;
+        //    });
+        //}
     }
 );
 //var getUrlParameter = function getUrlParameter(sParam) {
