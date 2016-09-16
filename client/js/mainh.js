@@ -3,6 +3,7 @@
 $(document).ready(
     function () {
         'use strict';
+        var historyJson;
 
         //Retrieving data from config.json for table template .each
         $.getJSON('../public/config.json', showUrlTable);
@@ -12,7 +13,24 @@ $(document).ready(
         }
 
         // Retrieving data from status json and adding information to the table per each url
-        $.getJSON('../log/status.json', showUrlStatus);
+        _.each([1,2,3,4,5,6,7,8,9], function (el) {
+            $.getJSON('../log/status_'+ el +'.json', mergeHistoryJson);
+        });
+        var historyJson = [];
+        function mergeHistoryJson(data) {
+            historyJson.push(data);
+            console.log(historyJson);
+        }
+
+        //$.each(_.values(data)[i], function (id, status) {
+
+
+
+
+
+
+        // Retrieving data from status json and adding information to the table per each url\
+        var historyJson = [];
         function showUrlStatus(data) {
             var i = 0;
             $.each(_.values(data)[i], function (id, status) {
@@ -43,3 +61,18 @@ $(document).ready(
         }
     }
 );
+//var getUrlParameter = function getUrlParameter(sParam) {
+//    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+//        sURLVariables = sPageURL.split('&'),
+//        sParameterName,
+//        i;
+//
+//    for (i = 0; i < sURLVariables.length; i++) {
+//        sParameterName = sURLVariables[i].split('=');
+//
+//        if (sParameterName[0] === sParam) {
+//            return sParameterName[1] === undefined ? true : sParameterName[1];
+//        }
+//    }
+//};
+//console.log(getUrlParameter('time'));

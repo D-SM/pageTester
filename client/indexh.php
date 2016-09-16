@@ -125,7 +125,7 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/mainh.js"></script>
 
 </body>
 </html>
