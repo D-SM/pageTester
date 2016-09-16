@@ -1,0 +1,140 @@
+body {
+    background-color: #e5e5e5;
+}
+
+header {
+    background: #22a4b5;
+    margin-top: 0;
+    position: relative;
+    color: #ffffff;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin-left: 10px;
+    padding: 4px 0 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    background: #f2f2f2;
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    background: #ffffff;
+    position: relative;
+}
+
+.servicesTableContainer {
+    margin: 3px 10px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.65);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.65);
+    box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.65);
+}
+
+.timeStamp {
+    text-align: right;
+}
+
+.timeStamp p {
+    margin-top: 5px;
+    padding: 5px 50px 1px 0;
+    color: #777777;
+}
+
+.menuTop {
+    margin-left: 10px;
+    margin-bottom: -19px;
+}
+
+.menuTop li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menuTop a {
+    display: block;
+    padding: 14px 13px;
+    border: 1px;
+    border-color: #004d40;
+    color: #ffffff;
+}
+
+.menuTop a:hover {
+    background: #e5e5e5;
+    background-opacity: 0.1;
+    text-decoration: none;
+    color: black;
+}
+
+.menuContainer {
+    margin-left: 10px;
+    margin-bottom: -17px;
+}
+
+.menuContainer li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menuContainer a {
+    display: block;
+    padding: 16px 15px;
+    border: 1px;
+    border-color: #004d40;
+}
+
+.centered {
+    margin: 0 auto;
+    width: 800px;
+    padding: 10px 0 10px 0;
+}
+
+.menuBottom {
+    margin-left: 10px;
+}
+
+.menuBottom li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menuBottom a {
+    display: block;
+    padding: 16px 15px;
+    border: 1px;
+    border-color: #004d40;
+}
+
+.image1 {
+    background-image: url("../img/status_online.png");
+    background-position: center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+
+}
+
+.table > tbody > tr > td > .image1 {
+    padding: 0 10px 0 0;
+
+}
+
+.image0 {
+    background: url("../img/status_offline.png");
+    background-position: center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+
+}
